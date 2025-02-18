@@ -14,7 +14,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Cipher Labs",
+  title: "",
   description: "Created by 0xsid0703",
 };
 
