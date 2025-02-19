@@ -5,7 +5,10 @@ import useSWR from 'swr'
 
 const Reward = () => {
     const [miners] = useState(process.env.NEXT_PUBLIC_MINERS?.split(",").map((miner: string) => parseInt(miner.trim(), 10)).filter((miner: number) => !isNaN(miner)))
-    const { data, error, isLoading } = useSWR('/api/getRewards', fetcher)
+    const { data, error, isLoading } = useSWR('/api/getRewards', fetcher, {
+        revalidateOnFocus: false,
+        refreshInterval: 5000
+    })
     if (isLoading) return <div>Loading...</div>
     if (error) return <div>Error loading data</div>
     if (data) {
