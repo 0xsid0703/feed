@@ -58,13 +58,14 @@ const Reward = () => {
                                         <td className='text-center'>{item.Performance}</td>
                                         <td className='text-start'>{item.daily}</td>
                                     </tr>
-                                ))
+                                )
+                                )
                             }
                         </tbody>
                     </table>
                     <div className='flex flex-col gap-2 mt-4 justify-center items-center'>
-                        <span>Total Daily: {total_daily}</span>
-                        <span>Total Stake: {total_stake}</span>
+                        <span className='flex flex-row gap-2'>Total Daily: <span className="blur-sm hover:blur-0 transition-all duration-300 cursor-pointer">{total_daily}</span></span>
+                        <span className='flex flex-row gap-2'>Total Stake: <span className="blur-sm hover:blur-0 transition-all duration-300 cursor-pointer">{total_stake}</span></span>
                     </div>
                 </div>
             </div>
