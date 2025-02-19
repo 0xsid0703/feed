@@ -17,6 +17,7 @@ const Reward = () => {
             ...item,
             grade: index + 1,
         }))
+
         const filteredData = addedGrade.filter((item: any) =>
             miners?.includes(item.uid)
         );
@@ -34,7 +35,7 @@ const Reward = () => {
         return (
             <div className='w-full p-10 border border-white rounded-2xl'>
                 <div className='flex flex-col gap-5'>
-                    <div className='text-2xl font-bold text-center'>Rewards</div>
+                    <div className='text-2xl font-bold text-center'>Reward</div>
                     <table>
                         <thead>
                             <tr>
