@@ -1,6 +1,6 @@
 "use client"
 import { fetcher } from '@/utils/fetcher'
-import React, { useState } from 'react'
+import React from 'react'
 import useSWR from 'swr'
 import {
     Chart as ChartJS,
@@ -13,7 +13,6 @@ import {
     Legend,
 } from 'chart.js';
 import { Line } from 'react-chartjs-2';
-import axios from 'axios'
 
 ChartJS.register(
     CategoryScale,
