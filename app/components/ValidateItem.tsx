@@ -3,7 +3,7 @@ import React from 'react'
 import { fetcher } from '@/utils/fetcher'
 import useSWR from 'swr'
 type Props = {
-    miner: string
+    miner: number
 }
 
 const ValidateItem = ({ miner }: Props) => {

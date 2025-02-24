@@ -1,10 +1,11 @@
 'use client'
-import React, { useState } from 'react'
+import React from 'react'
 import { fetcher } from '@/utils/fetcher'
 import useSWR from 'swr'
-
-const Reward = () => {
-    const [miners] = useState(process.env.NEXT_PUBLIC_MINERS?.split(",").map((miner: string) => parseInt(miner.trim(), 10)).filter((miner: number) => !isNaN(miner)))
+type Props = {
+    miners: number[]
+}
+const Reward = ({miners}: Props) => {
     const { data, error, isLoading } = useSWR('/api/getRewards', fetcher, {
         revalidateOnFocus: false,
         refreshInterval: 5000

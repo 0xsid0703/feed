@@ -1,9 +1,10 @@
 "use client"
-import React, { useState } from 'react'
+import React from 'react'
 import ValidateItem from './ValidateItem'
-
-const Validate = () => {
-    const [miners] = useState(process.env.NEXT_PUBLIC_MINERS?.split(","))
+type Props = {
+    miners: number[]
+}
+const Validate = ({miners}: Props) => {
     return (
         <div className='flex flex-col gap-5 p-10 border border-white rounded-2xl justify-center items-center'>
             <div className='text-2xl font-bold text-center'>Validate</div>

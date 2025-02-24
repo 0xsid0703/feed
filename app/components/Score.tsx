@@ -1,10 +1,11 @@
 "use client"
 import { fetcher } from '@/utils/fetcher'
-import React, { useState } from 'react'
+import React from 'react'
 import useSWR from 'swr'
-
-const Score = () => {
-    const [miners] = useState(process.env.NEXT_PUBLIC_MINERS?.split(",").map((miner: string) => parseInt(miner.trim(), 10)).filter((miner: number) => !isNaN(miner)))
+type Props = {
+    miners: number[]
+}
+const Score = ({miners}: Props) => {
     const { data, error, isLoading } = useSWR('https://synth.mode.network/validation/scores/latest', fetcher)
     if (isLoading) return <div>Loading...</div>
     if (error) return <div>Error loading data</div>
