@@ -17,7 +17,7 @@ export default function Home() {
     <div className="mx-5 md:mx-10 flex flex-col gap-2">
       <div className="flex flex-row justify-between items-center">
         <div className="flex flex-row gap-2 py-2 px-4 bg-transparent border border-white w-fit rounded-xl cursor-pointer hover:bg-slate-500" onClick={() => setGraph(!graph)}>{!graph ? <Eye /> : <EyeOff />}Graph</div>
-        <div className="flex flex-row gap-2 items-center">
+        {graph && <div className="flex flex-row gap-2 items-center">
           Period: 
           <select
             className="bg-gray-800 border-white border rounded-lg py-2 px-6 text-white"
@@ -31,7 +31,7 @@ export default function Home() {
               ))
             }
           </select>
-        </div>
+        </div>}
       </div>
       {!graph ? <div className="flex flex-row gap-10 w-full">
         <Validate miners={miners} />
