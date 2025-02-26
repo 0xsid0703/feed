@@ -114,7 +114,6 @@ const RecentScore = ({ selectedDay, mm }: Props) => {
             labels,
             datasets: dataset
         }
-        console.log({ line })
         return (
             <div className='w-full'><Line options={options} data={line} /></div>
         )
