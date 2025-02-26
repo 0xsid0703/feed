@@ -34,8 +34,55 @@ export const options = {
             display: true,
             text: 'Chart.js Line Chart',
         },
+        tooltip: {
+            mode: 'nearest', // Show only the nearest point
+            intersect: true, // Only show the tooltip when directly hovering over a point
+            callbacks: {
+                label: function (tooltipItem: any) {
+                    return `${tooltipItem.dataset.label}: ${tooltipItem.raw}`; // Show only the selected point's value
+                }
+            }
+        }
+    },
+    hover: {
+        mode: 'dataset', // Ensures hover highlights a dataset
+        intersect: false,
+        onHover: (event: any, elements: any, chart: any) => {
+            if (elements.length) {
+                const hoveredDatasetIndex = elements[0].datasetIndex;
+                chart.data.datasets.forEach((dataset: any, index: number) => {
+                    dataset.borderColor = index === hoveredDatasetIndex 
+                        ? dataset.originalBorderColor 
+                        : `rgba(200, 200, 200, 0.2)`;
+                    dataset.backgroundColor = index === hoveredDatasetIndex 
+                        ? dataset.originalBackgroundColor 
+                        : `rgba(200, 200, 200, 0.2)`;
+                });
+                chart.update();
+            } else {
+                chart.data.datasets.forEach((dataset: any) => {
+                    dataset.borderColor = dataset.originalBorderColor;
+                    dataset.backgroundColor = dataset.originalBackgroundColor;
+                });
+                chart.update();
+            }
+        }
+    },
+    elements: {
+        line: {
+            borderWidth: 2,
+        },
+        point: {
+            radius: 4,
+        }
+    },
+    interaction: {
+        mode: 'nearest',
+        intersect: true, // Ensures only the hovered point is considered
+        axis: 'x',
     },
 };
+
 type Props = {
     selectedDay: number,
     mm: string

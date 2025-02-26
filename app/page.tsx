@@ -25,11 +25,10 @@ export default function Home() {
             onChange={(e) => setSelectedDay(parseInt(e.target.value, 10))}>
             {
               days.map((day, index) => (
-                <option key={index} value={day} className="bg-transparent text-red">
+                <option key={index} value={day} className="bg-transparent">
                   {day}
                 </option>
-              ))
-            }
+              ))}
           </select>
         </div>}
       </div>
