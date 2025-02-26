@@ -34,15 +34,6 @@ export const options = {
             display: true,
             text: 'Chart.js Line Chart',
         },
-        tooltip: {
-            mode: 'nearest', // Show only the nearest point
-            intersect: true, // Only show the tooltip when directly hovering over a point
-            callbacks: {
-                label: function (tooltipItem: any) {
-                    return `${tooltipItem.dataset.label}: ${tooltipItem.raw}`; // Show only the selected point's value
-                }
-            }
-        }
     },
 };
 
