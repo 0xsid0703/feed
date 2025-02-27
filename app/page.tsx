@@ -8,7 +8,7 @@ import Validate from "./components/Validate";
 import { Eye, EyeOff } from "lucide-react";
 
 export default function Home() {
-  const mm = "9,37,41,60,117,128,129,187,188,216,249,241,245,247"
+  const mm = "9,37,60,117,128,129,187,188,216,249,241,245,247"
   const days = [1, 2, 3, 4]
   const [selectedDay, setSelectedDay] = useState(1)
   const miners = mm?.split(",").map((miner: string) => parseInt(miner.trim(), 10)).filter((miner: number) => !isNaN(miner))

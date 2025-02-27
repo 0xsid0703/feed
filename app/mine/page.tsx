@@ -9,7 +9,6 @@ const MinePage = () => {
         "5HirTJaJRyg595UEGnnj2cF8woxQNe3LR5SRusRMPMp9UGnY",
         "5CcWZNTzcziL1AXrKLLX7RDTuYW54gh5QpJgj9M67TtorWzr",
         "5FH86a6kwcvWPA2WRCiQU17FbUTYauYRvjugYwx1J7KTpYrT",
-        "5FF4L75NyhJ333Jbm6r7eKytVbmaTG8xRj8vJ7LbaV1xDN4A",
         "5GTFJrbEXr1x19HwTLG93Swb3JSWsXs5jkSNfBadydVaf9ag",
         "5FUduioEDfg1DWEUf2xYQ7ULo9hAM1fPp3thyitUybDCitpK",
         "5FvV6vtap12HyEy6P3WSVoCFPti6Fc3y3k3vj5Ng5TXgPhVD"
