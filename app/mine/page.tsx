@@ -12,7 +12,7 @@ const MinePage = () => {
         "5GTFJrbEXr1x19HwTLG93Swb3JSWsXs5jkSNfBadydVaf9ag",
         "5FUduioEDfg1DWEUf2xYQ7ULo9hAM1fPp3thyitUybDCitpK",
         "5FvV6vtap12HyEy6P3WSVoCFPti6Fc3y3k3vj5Ng5TXgPhVD",
-        "5DZRvMceSTUjErFGajCkTVe8Ubahq1dHVSM3A7VFVewhszqW"
+        // "5DZRvMceSTUjErFGajCkTVe8Ubahq1dHVSM3A7VFVewhszqW"
     ]
     return (
         <div className='w-screen px-10'>
