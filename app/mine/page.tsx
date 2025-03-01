@@ -6,7 +6,7 @@ import Price from '../components/Price'
 const MinePage = () => {
     const coldkeys = [
         "5C8AE3XAGmx9vRMYGdcLYwdSXbk6EAsmhtVCnkFhjV4XxJKq",
-        "5HirTJaJRyg595UEGnnj2cF8woxQNe3LR5SRusRMPMp9UGnY",
+        // "5HirTJaJRyg595UEGnnj2cF8woxQNe3LR5SRusRMPMp9UGnY",
         "5CcWZNTzcziL1AXrKLLX7RDTuYW54gh5QpJgj9M67TtorWzr",
         "5FH86a6kwcvWPA2WRCiQU17FbUTYauYRvjugYwx1J7KTpYrT",
         "5GTFJrbEXr1x19HwTLG93Swb3JSWsXs5jkSNfBadydVaf9ag",
