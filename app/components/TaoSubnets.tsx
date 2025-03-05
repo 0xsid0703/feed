@@ -32,8 +32,8 @@ const TaoSubnets = () => {
                         {
                             data.map((item: any, index: number) => (
                                 [0, 14, 50, 63, 65, 66, 67, 68, 71].includes(item.subnet) && <tr key={index}>
-                                    <td className='text-center blur-sm hover:blur-0 cursor-pointer'>{item.subnet}</td>
-                                    <td className='text-center blur-sm hover:blur-0 cursor-pointer'>{item.name} {item.letter}</td>
+                                    <td className='text-center'>{item.subnet}</td>
+                                    <td className='text-center'>{item.name} {item.letter}</td>
                                     <td className='text-center'>𝞃 {showTaoNumber(item.price)}</td>
                                     <td className={clsx(item.price_difference_day > 0 ? "text-green-500 text-center" : "text-red-500 text-center")}>{showTaoNumber(item.price_difference_day)} %</td>
                                     <td className={clsx(item.price_difference_week > 0 ? "text-green-500 text-center" : "text-red-500 text-center")}>{showTaoNumber(item.price_difference_week)} %</td>
