@@ -26,10 +26,11 @@ const TaoXnet = ({ coldkey }: Props) => {
     if (isLoading) return <div>Loading...</div>
     if (error) return <div>Error loading data</div>
     if (data) {
+        console.log({ data })
         return (
             <>
                 {
-                    data.map((item: any, index: number) => (
+                    data.length && data.map((item: any, index: number) => (
                         <tr key={index}>
                             <td className='text-center'>{item.NETUID}</td>
                             <td className='text-center'>{item.UID}</td>
