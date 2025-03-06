@@ -31,7 +31,7 @@ const TaoSubnets = () => {
                     <tbody>
                         {
                             data.map((item: any, index: number) => (
-                                [0, 14, 50, 63, 65, 66, 67, 68, 71].includes(item.subnet) && <tr key={index}>
+                                [0, 14, 50, 63, 65, 66, 67, 68, 71, 72].includes(item.subnet) && <tr key={index}>
                                     <td className='text-center'>{item.subnet}</td>
                                     <td className='text-center'>{item.name} {item.letter}</td>
                                     <td className='text-center'>𝞃 {showTaoNumber(item.price)}</td>
