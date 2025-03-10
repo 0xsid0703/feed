@@ -1,3 +1,4 @@
+"use client"
 import React, { useState } from 'react'
 import TaoXnet from '../components/TaoXnet'
 import TaoSubnets from '../components/TaoSubnets'
