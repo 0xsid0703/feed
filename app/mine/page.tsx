@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import TaoXnet from '../components/TaoXnet'
 import TaoSubnets from '../components/TaoSubnets'
 import Price from '../components/Price'
@@ -15,8 +15,12 @@ const MinePage = () => {
         "5GZME2m32VyM5fUt3APGL5YGTqSSex6B3K1kDPoEi6dKvbaH"
         // "5DZRvMceSTUjErFGajCkTVe8Ubahq1dHVSM3A7VFVewhszqW"
     ]
+    const [pass, setPassed] = useState(false)
     return (
         <div className='w-screen px-10'>
+            {
+
+            }
             <div className='flex flex-col gap-2 w-full'>
                 <Price />
                 <table>
@@ -34,13 +38,13 @@ const MinePage = () => {
                             <th>DAILY</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    {pass && <tbody>
                         {
                             coldkeys.map((coldkey, index) => (
                                 <TaoXnet coldkey={coldkey} key={index} />
                             ))
                         }
-                    </tbody>
+                    </tbody>}
                 </table>
                 <TaoSubnets />
             </div>
