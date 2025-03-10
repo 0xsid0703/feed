@@ -16,11 +16,9 @@ const MinePage = () => {
         // "5DZRvMceSTUjErFGajCkTVe8Ubahq1dHVSM3A7VFVewhszqW"
     ]
     const [pass, setPassed] = useState(false)
+    const [pass2, setPassed2] = useState(false)
     return (
         <div className='w-screen px-10'>
-            {
-
-            }
             <div className='flex flex-col gap-2 w-full'>
                 <Price />
                 <table>
@@ -33,12 +31,12 @@ const MinePage = () => {
                             <th>DIVIDENDS</th>
                             <th>EMISSION</th>
                             <th>AXON</th>
-                            <th>COLDKEY</th>
-                            <th>HOTKEY</th>
+                            <th onClick={() => setPassed(!pass)}>COLDKEY</th>
+                            <th onClick={() => setPassed2(!pass2)}>HOTKEY</th>
                             <th>DAILY</th>
                         </tr>
                     </thead>
-                    {pass && <tbody>
+                    {pass && pass2 && <tbody>
                         {
                             coldkeys.map((coldkey, index) => (
                                 <TaoXnet coldkey={coldkey} key={index} />
