@@ -32,7 +32,7 @@ const TaoXnet = ({ coldkey }: Props) => {
                 {
                     data.length && data.map((item: any, index: number) => (
                         <tr key={index}>
-                            <td className='text-center'>{item.NETUID - 1}</td>
+                            <td className='text-center'>{item.NETUID}</td>
                             <td className='text-center'>{item.UID}</td>
                             <td className='text-center'>{showTaoNumber(item.stakeTAO)} 𝞃 / {showTaoNumber(item.stakeAlpha)} ε</td>
                             <td className='text-center'>{showNumber(item.incentive, 5)}</td>
