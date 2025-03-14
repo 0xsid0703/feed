@@ -14,6 +14,7 @@ const TaoSubnets = () => {
         console.log({error})
         return <div>Error loading data</div>}
     if (data) {
+        console.log({data})
         return (
             <div className='w-full'>
                 <table className='w-full table-auto'>
@@ -30,7 +31,7 @@ const TaoSubnets = () => {
                     </thead>
                     <tbody>
                         {
-                            data.map((item: any, index: number) => (
+                            data && data.length > 1 && data.map((item: any, index: number) => (
                                 [0, 50, 65, 66, 67, 68, 71, 72, 73, 74, 75, 76].includes(item.subnet) && <tr key={index}>
                                     <td className='text-center'>{item.subnet}</td>
                                     <td className='text-center'>{item.name} {item.letter}</td>

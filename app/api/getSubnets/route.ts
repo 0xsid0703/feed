@@ -13,7 +13,7 @@ export async function GET() {
           if (!response.ok) {
             return NextResponse.json({ error: "Failed to fetch data" });
           }
-      
+          
           const data = await response.json();
           return NextResponse.json(data);
     } catch (error) {
